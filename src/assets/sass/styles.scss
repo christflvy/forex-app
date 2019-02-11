@@ -1,0 +1,126 @@
+$black: #666;
+$white: #fff;
+$grey: #aaa;
+
+body {
+  font-size: 14px;
+  margin: 0;
+}
+
+.header {
+  padding: 15px;
+  border-bottom: 1px solid $black;
+  .title {
+    margin-top: 0;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .initial-currency {
+      font-weight: bold;
+      font-size: 15px;
+    }
+    .initial-value {
+      font-weight: bold;
+      outline: 0;
+      border: 1px solid $grey;
+      padding: 5px;
+      border-radius: 3px;
+    }
+  }
+}
+
+.currencies {
+  padding: 15px;
+  .loading {
+    font-size: 30px;
+    text-align: center;
+    margin: 0 auto 10px;
+  }
+}
+
+.currencies-list {
+  padding-left: 0;
+  margin: 0;
+  .list {
+    list-style: none;
+    border: 1px solid $black;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border-radius: 0;
+    .list-content {
+      padding: 5px;
+      position: relative;
+      flex: 1;
+      .total {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 15px;
+      }
+      .symbol {
+        margin-bottom: 3px;
+        font-size: 15px;
+      }
+      .desc {
+        font-weight: bold;
+        font-style: italic;
+      }
+      .rate {
+        font-style: italic;
+      }
+    }
+    .btn-remove {
+      background-color: $white;
+      border: 0;
+      border-left: 1px solid $black;
+      padding: 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  }
+}
+
+.currencies-add {
+  padding: 0 15px;
+  margin-bottom: 15px;
+  .btn-add {
+    width: 100%;
+    padding: 10px 5px;
+    font-size: 14px;
+    border: 1px solid $black;
+    background-color: $white;
+    border-radius: 0;
+    cursor: pointer;
+    text-align: left;
+  }
+  .menu-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .menu {
+      flex: 1;
+      height: 40px;
+      border-radius: 0;
+      -webkit-appearance: none;
+      padding-left: 10px;
+      background-color: white;
+      outline: 0;
+      border: 1px solid $black;
+      cursor: pointer;
+    }
+    .btn-submit {
+      @extend .btn-add;
+      width: 20%;
+      height: 40px;
+      border-radius: 0;
+      border-left: 0;
+      text-align: center;
+    }
+  }
+}
